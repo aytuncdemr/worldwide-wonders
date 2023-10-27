@@ -88,6 +88,7 @@ export default function SearchBar() {
                 }`}
             >
                 <FontAwesomeIcon
+                className="hover:cursor-pointer"
                     icon={isSearching ? faClose : faSearch}
                 ></FontAwesomeIcon>
                 <input

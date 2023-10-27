@@ -20,7 +20,7 @@ export default function Header(){
                 height={1080}
                 width={1920}
                 alt="Homepage"
-                className="w-6 h-6 rounded-full sm:w-12 sm:h-12 md:w-16 md:h-16 xl:w-20 xl:h-20"
+                className="w-6 h-6 hover:cursor-pointer rounded-full sm:w-12 sm:h-12 md:w-16 md:h-16 xl:w-20 xl:h-20"
                 src={HomeIcon}
                 onClick={goToMainPageHandler}
             ></Image>
@@ -30,13 +30,19 @@ export default function Header(){
             <div className="links hidden ml-auto lg:block">
                 <ul className="flex gap-4 text-xl xl:text-2xl">
                     <li>
-                        <a href="">About</a>
+                        <a href="https://github.com/aytuncdemr/worldwide-wonders/tree/main#readme">
+                            About
+                        </a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="https://www.linkedin.com/in/aytun%C3%A7-demir-70339723a/">
+                            Contact
+                        </a>
                     </li>{" "}
                     <li>
-                        <a href="">Source Code</a>
+                        <a href="https://github.com/aytuncdemr/worldwide-wonders">
+                            Source Code
+                        </a>
                     </li>
                 </ul>
             </div>

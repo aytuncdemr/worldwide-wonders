@@ -25,7 +25,7 @@ export default function CountryCard({
                         width={1920}
                         height={1920}
                         src={flagUrl}
-                        className="mb-4 xl:h-52"
+                        className={`mb-4 ${!isDetailed && "xl:h-52"}`}
                     ></Image>
 
                     <h2 className="text-center text-2xl font-semibold text-gray-700 md:text-3xl mb-6">
