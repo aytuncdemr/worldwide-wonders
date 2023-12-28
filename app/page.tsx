@@ -16,17 +16,19 @@ export default function Home() {
             const [activeCountryInfo] = await fetchFromRestAPI(
                 `/name/${activeCountry.countryName}`
             );
-            //@ts-ignore
-            activeCountryContext.setActiveCountry(activeCountryInfo);
+            console.log(activeCountry);
+            activeCountryContext?.setActiveCountry(activeCountryInfo);
         })();
     }, []);
 
     return (
         <main className="max-w-[72rem] mx-auto min-h-screen">
-            <>
-                <InitialCountrySection></InitialCountrySection>
-                <NeighboursSection></NeighboursSection>
-            </>
+            {activeCountryContext?.activeCountry && (
+                <>
+                    <InitialCountrySection></InitialCountrySection>
+                    <NeighboursSection></NeighboursSection>
+                </>
+            )}
         </main>
     );
 }

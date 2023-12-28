@@ -6,9 +6,9 @@ import CountryCard from "./CountryCard";
 import fetchFromRestAPI from "@/utils/fetchFromRestAPI";
 
 export default function InitialCountrySection() {
-
     const activeCountryContext = useContext(ActiveCountryContext);
 
+    console.log(activeCountryContext?.activeCountry);
     return (
         <section className="initial-country-section py-16 xl:py-32 px-4">
             {activeCountryContext?.activeCountry && (
