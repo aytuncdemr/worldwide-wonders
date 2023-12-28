@@ -28,12 +28,10 @@ export default function SearchBar() {
         })();
     }, []);
 
-    useEffect(() =>{
-
+    useEffect(() => {
         setFoundedCountryNames([]);
         setIsSearching(false);
-
-    },[pathName]);
+    }, [pathName]);
 
     function searchQueryHandler(event: React.ChangeEvent<HTMLInputElement>) {
         if (countryNames) {
@@ -51,28 +49,24 @@ export default function SearchBar() {
                 ),
             ]);
         }
-        if(!event.target.value)
-            setFoundedCountryNames([]);
-
+        if (!event.target.value) setFoundedCountryNames([]);
     }
 
     function searchClickHandler() {
-        
-        setIsSearching((prevState:boolean) => !prevState);
-        
+        setIsSearching((prevState: boolean) => !prevState);
+
         if (!isSearching) {
             //@ts-ignore
             document.body.style.overflow = "hidden";
             window.scrollTo(0, 0);
             document.getElementById("search-bar")?.focus();
         }
-        
+
         //@ts-ignore
         else {
             document.body.style.overflow = "initial";
             setFoundedCountryNames([]);
         }
-
     }
 
     return (
@@ -88,7 +82,7 @@ export default function SearchBar() {
                 }`}
             >
                 <FontAwesomeIcon
-                className="hover:cursor-pointer"
+                    className="hover:cursor-pointer"
                     icon={isSearching ? faClose : faSearch}
                 ></FontAwesomeIcon>
                 <input
@@ -104,7 +98,10 @@ export default function SearchBar() {
                     (countryName: string, index: number) => {
                         return (
                             <li key={index}>
-                                <Link href={`/country/${countryName}`} className="text-xl text-center bg-white rounded-lg">
+                                <Link
+                                    href={`/country/${countryName}`}
+                                    className=" w-full block  text-xl text-center bg-white rounded-lg"
+                                >
                                     {countryName}
                                 </Link>
                             </li>

@@ -8,6 +8,7 @@ import fetchFromRestAPI from "@/utils/fetchFromRestAPI";
 export default function InitialCountrySection() {
     const activeCountryContext = useContext(ActiveCountryContext);
 
+
     return (
         <section className="initial-country-section py-16 xl:py-32 px-4">
             {activeCountryContext?.activeCountry && (
@@ -18,7 +19,7 @@ export default function InitialCountrySection() {
                             {activeCountryContext?.activeCountry.name?.common}
                         </h2>
                     </header>
-                    <div className="initial-country-card">
+                    <div className="initial-country-card flex justify-center">
                         <CountryCard
                             isDetailed={true}
                             country={activeCountryContext.activeCountry}

@@ -15,7 +15,7 @@ export default function Header(){
     }
 
     return (
-        <header className="py-4 px-2 gap-2 flex lg:px-6 justify-center items-center sm:gap-2 md:gap-6 lg:justify-start xl:gap-12  ">
+        <header className="py-4 max-w-[100rem] mx-auto px-2 gap-2 flex lg:px-6 justify-center items-center sm:gap-2 md:gap-6 lg:justify-start xl:gap-12  ">
             <Image
                 height={1080}
                 width={1920}

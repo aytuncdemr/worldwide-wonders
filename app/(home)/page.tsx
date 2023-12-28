@@ -21,7 +21,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="max-w-[72rem] mx-auto">
+        <main className="max-w-[72rem] mx-auto min-h-screen">
             {activeCountryContext?.activeCountry && (
                 <>
                     <InitialCountrySection></InitialCountrySection>
