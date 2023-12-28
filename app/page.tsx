@@ -22,12 +22,10 @@ export default function Home() {
 
     return (
         <main className="max-w-[72rem] mx-auto min-h-screen">
-            {activeCountryContext?.activeCountry && (
-                <>
-                    <InitialCountrySection></InitialCountrySection>
-                    <NeighboursSection></NeighboursSection>
-                </>
-            )}
+            <>
+                <InitialCountrySection></InitialCountrySection>
+                <NeighboursSection></NeighboursSection>
+            </>
         </main>
     );
 }
