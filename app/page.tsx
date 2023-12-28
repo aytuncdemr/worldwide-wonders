@@ -16,7 +16,7 @@ export default function Home() {
             const [activeCountryInfo] = await fetchFromRestAPI(
                 `/name/${activeCountry.countryName}`
             );
-            activeCountryContext?.setActiveCountry(activeCountryInfo);
+            activeCountryContext.setActiveCountry(activeCountryInfo);
         })();
     }, []);
 
